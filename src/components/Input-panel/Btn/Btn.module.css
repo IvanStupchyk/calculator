@@ -1,0 +1,41 @@
+.btn_container {
+    margin: 5px;
+    padding: 2px;
+    box-sizing: border-box;
+    height: 35px;
+    width: 35px;
+    border-radius: 12px;
+    background-color: #F0F0F3;
+    /*background-color: red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #728AB7;
+    box-shadow: -5px -5px 12px rgba(255, 255, 255, 0.6), 5px 5px 12px rgba(174, 174, 192, 0.2);
+}
+
+.btn_container:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.btn_container:active {
+    opacity: 1;
+}
+
+.btn_zero {
+    width: 80px;
+}
+
+.btn_equally {
+    background-color: #2DD3C5;
+    color: #fff;
+}
+
+.btn_arithmetic {
+    color: #745FF2;
+}
+
+.btn_eraser {
+    color: #898989;
+}
