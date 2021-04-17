@@ -10,7 +10,7 @@ type BtnPropsType = {
     getItemButton?: (value: string) => void
 }
 
-function Btn(props: BtnPropsType) {
+export const Btn = (props: BtnPropsType) => {
 
     const typeBtn = () => {
         if (props.btnZero) {
@@ -26,9 +26,7 @@ function Btn(props: BtnPropsType) {
         }
     }
 
-    const sendValue = () => {
-        props.getItemButton && props.getItemButton(props.BtnContent)
-    }
+    const sendValue = () => props.getItemButton && props.getItemButton(props.BtnContent)
 
     return (
         <a onClick={sendValue}
@@ -36,7 +34,5 @@ function Btn(props: BtnPropsType) {
         >
             {props.BtnContent}
         </a>
-    );
+    )
 }
-
-export default Btn;

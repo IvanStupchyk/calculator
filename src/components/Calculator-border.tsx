@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Calculator-border.module.css';
-import Board from "./Board/Board";
-import InputPanel from "./Input-panel/Input-panel";
+import {InputPanel} from "./Input-panel/Input-panel";
+import {Board} from "./Board/Board";
 
 type InputPanelTypeProps = {
     getItemButton: (value: string) => void
@@ -9,7 +9,7 @@ type InputPanelTypeProps = {
     resultValue: number
 }
 
-function CalculatorBorder(props: InputPanelTypeProps) {
+export const CalculatorBorder = (props: InputPanelTypeProps) => {
     return (
         <div className={s.calculator_container}>
             <Board resultValue={props.resultValue}
@@ -17,7 +17,6 @@ function CalculatorBorder(props: InputPanelTypeProps) {
             />
             <InputPanel getItemButton={props.getItemButton}/>
         </div>
-    );
+    )
 }
 
-export default CalculatorBorder;

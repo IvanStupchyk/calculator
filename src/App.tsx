@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
-import CalculatorBorder from "./components/Calculator-border";
+import {CalculatorBorder} from "./components/Calculator-border";
 
-function App() {
+export const App = () => {
     const [intermediateValue, setIntermediateValue] = useState('')
     const [resultValue, setResultValue] = useState<number>(0)
 
@@ -56,19 +56,18 @@ function App() {
             default:
                 intermediateValue[intermediateValue.length - 1] !== ')' && intermediateValue.length < 17 &&
                 setIntermediateValue(prev => prev + value)
-
                 break
         }
     }
 
     return (
         <div className="App">
-            <CalculatorBorder resultValue={resultValue}
-                              intermediateValue={intermediateValue}
-                              getItemButton={getItemButton}
+            <CalculatorBorder
+                resultValue={resultValue}
+                intermediateValue={intermediateValue}
+                getItemButton={getItemButton}
             />
         </div>
-    );
+    )
 }
 
-export default App;

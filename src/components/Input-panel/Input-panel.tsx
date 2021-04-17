@@ -1,12 +1,12 @@
 import React from 'react';
 import s from './Input-panel.module.css';
-import Btn from "./Btn/Btn";
+import {Btn} from "./Btn/Btn";
 
 type InputPanelTypeProps = {
     getItemButton: (value: string) => void
 }
 
-function InputPanel(props: InputPanelTypeProps) {
+export const InputPanel = (props: InputPanelTypeProps) => {
     const btnProperty = {
         btnZero: true,
         btnEqually: true,
@@ -109,7 +109,5 @@ function InputPanel(props: InputPanelTypeProps) {
                  BtnContent={btnContent['sign'].btnEqually}
             />
         </div>
-    );
+    )
 }
-
-export default InputPanel;
